@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <h1>Product Details For {{ id }}</h1>
+  <div>
+    <ProductDetails :product="product" />
   </div>
 </template>
 
@@ -8,6 +8,11 @@
 definePageMeta({ layout: "products" });
 
 const { id } = useRoute().params;
+
+const { data: product }: { data: any } = await useFetch(
+  `https://fakestoreapi.com/products/${id}`,
+  { key: id as string },
+);
 </script>
 
 <style lang="scss" scoped>

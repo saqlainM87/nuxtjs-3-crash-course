@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h1>Home</h1>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat saepe
@@ -14,10 +14,6 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped>
-.container {
-  padding: 1rem;
-}
-</style>
+<style lang="scss" scoped></style>
 
 <style scoped></style>
