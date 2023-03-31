@@ -13,6 +13,14 @@ const { data: product }: { data: any } = await useFetch(
   `https://fakestoreapi.com/products/${id}`,
   { key: id as string },
 );
+
+if (!product.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Product not found!",
+    fatal: true,
+  });
+}
 </script>
 
 <style lang="scss" scoped>
